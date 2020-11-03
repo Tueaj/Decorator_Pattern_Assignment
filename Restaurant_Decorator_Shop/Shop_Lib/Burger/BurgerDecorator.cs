@@ -17,7 +17,7 @@ namespace Shop_Lib.Burger
         public virtual double BurgerPrice()
         {
             //default value for Burger is 50
-            return 49.95 + _burger.BurgerPrice();
+            return _burger.BurgerPrice();
         }
 
         public virtual string BurgerDetails()
