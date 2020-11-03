@@ -12,7 +12,7 @@ namespace Shop_Lib.Burger
 
         public override string BurgerDetails()
         {
-            return base.BurgerDetails() + ", Bacon";
+            return base.BurgerDetails() + ", Bacon ";
         }
 
         public override double BurgerPrice()

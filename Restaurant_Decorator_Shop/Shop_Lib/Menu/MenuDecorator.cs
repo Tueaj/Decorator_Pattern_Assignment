@@ -1,4 +1,5 @@
 ﻿using Shop_Lib.Burger;
+using Shop_Lib.Fries;
 
 namespace Shop_Lib.Menu
 {
@@ -22,6 +23,8 @@ namespace Shop_Lib.Menu
             return _menu.GetReceipt();
         }
 
+        //det her skal vi finde en anden vej omkring, da det ikke overholder OCP - Jacob
         public IBurger Burger { get; set; }
+        public IFries Fries { get; set; }
     }
 }
