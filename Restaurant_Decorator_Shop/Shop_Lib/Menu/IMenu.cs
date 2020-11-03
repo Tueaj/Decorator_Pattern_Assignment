@@ -3,6 +3,6 @@
     public interface IMenu
     {
         double Price { get; set; }
-        string GetRecipt();
+        string GetReceipt();
     }
 }
