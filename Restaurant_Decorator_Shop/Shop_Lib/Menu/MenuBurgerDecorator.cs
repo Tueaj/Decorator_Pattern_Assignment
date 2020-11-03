@@ -29,6 +29,7 @@ namespace Shop_Lib.Menu
 
         public MenuBurgerDecorator(IMenu menu):base(menu)
             {
+                Burger = new SimpleBurger();
             }
 
         public override double GetPrice()

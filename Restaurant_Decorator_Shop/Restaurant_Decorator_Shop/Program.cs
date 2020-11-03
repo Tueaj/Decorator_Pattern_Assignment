@@ -16,7 +16,6 @@ namespace Restaurant_Decorator_Shop
             MenuDecorator menuUpgrade = new MenuBurgerDecorator(menu);
             Console.WriteLine("Menu: {0} Price: {1}", menu.GetReceipt(), menu.GetPrice());
 
-
             //laver en simple burger
             IBurger simpleBurger = new SimpleBurger();
             Console.WriteLine(simpleBurger.BurgerDetails() + ": " + simpleBurger.BurgerPrice());
