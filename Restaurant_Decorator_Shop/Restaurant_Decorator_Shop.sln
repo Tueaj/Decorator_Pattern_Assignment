@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant_Decorator_Shop", "Restaurant_Decorator_Shop\Restaurant_Decorator_Shop.csproj", "{564531E6-54A3-46DA-9CFA-FEF928152297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop_Lib", "Shop_Lib\Shop_Lib.csproj", "{3DC87AF9-E804-4AD8-8374-74821D3C6070}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564531E6-54A3-46DA-9CFA-FEF928152297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564531E6-54A3-46DA-9CFA-FEF928152297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564531E6-54A3-46DA-9CFA-FEF928152297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564531E6-54A3-46DA-9CFA-FEF928152297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC87AF9-E804-4AD8-8374-74821D3C6070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC87AF9-E804-4AD8-8374-74821D3C6070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC87AF9-E804-4AD8-8374-74821D3C6070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC87AF9-E804-4AD8-8374-74821D3C6070}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B8FAD2F-E4A1-467D-AA3E-1F67895AA059}
+	EndGlobalSection
+EndGlobal
