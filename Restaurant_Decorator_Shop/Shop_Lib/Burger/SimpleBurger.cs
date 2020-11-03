@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shop_Lib.Burger
 {
-    class SimpleBurger: IBurger
+    public class SimpleBurger: IBurger
     {
 
         double IBurger.BurgerPrice()

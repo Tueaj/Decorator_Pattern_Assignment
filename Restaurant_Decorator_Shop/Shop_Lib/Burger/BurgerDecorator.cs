@@ -7,21 +7,22 @@ namespace Shop_Lib.Burger
 {
     public abstract class BurgerDecorator : IBurger
     {
-        private readonly IBurger _Burger;
+        private readonly IBurger _burger;
 
-        public BikeAccessories(IBurger burger)
+        public BurgerDecorator(IBurger burger)
         {
-            _Burger = burger;
+            _burger = burger;
         }
 
-        public virtual double GetPrice()
+        public virtual double BurgerPrice()
         {
-            return _Burger.BurgerPrice();
+            //default value for Burger is 50
+            return 49.95 + _burger.BurgerPrice();
         }
 
-        public virtual string GetDetails()
+        public virtual string BurgerDetails()
         {
-            return _Burger.BurgerDetails();
+            return _burger.BurgerDetails();
         }
     }
 }

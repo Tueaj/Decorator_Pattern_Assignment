@@ -1,4 +1,5 @@
 ﻿using System;
+using Shop_Lib.Burger;
 
 namespace Restaurant_Decorator_Shop
 {
@@ -6,7 +7,8 @@ namespace Restaurant_Decorator_Shop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IBurger simpleBurger = new SimpleBurger();
+            Console.WriteLine(simpleBurger.BurgerDetails() + ": " + simpleBurger.BurgerPrice());
         }
     }
 }
