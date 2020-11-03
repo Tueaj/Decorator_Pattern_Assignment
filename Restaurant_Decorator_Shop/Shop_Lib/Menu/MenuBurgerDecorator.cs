@@ -22,7 +22,7 @@ namespace Shop_Lib.Menu
         public override string GetReceipt()
         {
 
-            return base.GetReceipt() + burger.GetReceipt();
+            return base.GetReceipt() + burger.BurgerDetails();
         }
     }
 }

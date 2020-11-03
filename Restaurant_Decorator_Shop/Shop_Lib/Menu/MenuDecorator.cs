@@ -15,7 +15,7 @@
             return _menu.Price();
 
         }
-        public string GetReceipt()
+        public virtual string GetReceipt()
         {
             return _menu.GetReceipt();
         }
