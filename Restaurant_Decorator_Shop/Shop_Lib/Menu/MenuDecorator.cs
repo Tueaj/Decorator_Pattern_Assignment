@@ -1,4 +1,6 @@
-﻿namespace Shop_Lib.Menu
+﻿using Shop_Lib.Burger;
+
+namespace Shop_Lib.Menu
 {
     public abstract class MenuDecorator : IMenu
     {
@@ -19,5 +21,7 @@
         {
             return _menu.GetReceipt();
         }
+
+        public IBurger Burger { get; set; }
     }
 }

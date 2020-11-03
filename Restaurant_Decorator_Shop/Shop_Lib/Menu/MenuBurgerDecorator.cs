@@ -7,22 +7,23 @@ namespace Shop_Lib.Menu
 {
     public class MenuBurgerDecorator : MenuDecorator
     {
+        private IBurger _burger;
         public IBurger Burger
         {
             private get
             {
-                if (Burger == null)
+                if (_burger == null)
                 {
                     return new SimpleBurger();
                 }
                 else
                 {
-                    return Burger;
+                    return _burger;
                 }
             }
             set
             {
-                Burger = value;
+                _burger = value;
             }
         }
 
