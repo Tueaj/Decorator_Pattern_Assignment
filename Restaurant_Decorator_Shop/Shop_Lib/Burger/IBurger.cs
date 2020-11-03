@@ -2,8 +2,7 @@
 {
     public interface IBurger
     {
-        IBurger MakeBurger();
-        double BurgerPrice { get; private set; }
+        double BurgerPrice();
         string BurgerDetails();
     }
 }

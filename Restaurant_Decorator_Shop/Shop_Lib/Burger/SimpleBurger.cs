@@ -6,19 +6,15 @@ namespace Shop_Lib.Burger
 {
     class SimpleBurger: IBurger
     {
-        public IBurger MakeBurger()
+
+        double IBurger.BurgerPrice()
         {
-            throw new NotImplementedException();
+            return 49.95;
         }
 
-        public double BurgerPrice
-        {
-            get;
-            set;
-        }
         public string BurgerDetails()
         {
-            return "simpleBurger";
+            return "SimpleBurger";
         }
     }
 }
