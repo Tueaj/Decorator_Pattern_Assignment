@@ -1,11 +1,23 @@
 ﻿namespace Shop_Lib.Menu
 {
-    public class MenuDecorator : IMenu
+    public abstract class MenuDecorator : IMenu
     {
-        public double Price { get; set; }
-        public string GetRecipt()
+
+        private readonly IMenu _menu;
+
+        public MenuDecorator(IMenu menu)
         {
-            throw new System.NotImplementedException();
+            _menu = menu;
+
+        }
+        public  virtual double Price()
+        {
+            return _menu.Price();
+
+        }
+        public string GetReceipt()
+        {
+            return _menu.GetReceipt();
         }
     }
 }
