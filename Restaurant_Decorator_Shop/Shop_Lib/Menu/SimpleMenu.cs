@@ -3,7 +3,7 @@
     public class SimpleMenu : IMenu
     {
         public double Price { get; set; }
-        public string GetRecipt()
+        public string GetReceipt()
         {
             throw new System.NotImplementedException();
         }
