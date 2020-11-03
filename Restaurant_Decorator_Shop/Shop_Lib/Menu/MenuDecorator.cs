@@ -10,9 +10,9 @@
             _menu = menu;
 
         }
-        public  virtual double Price()
+        public  virtual double GetPrice()
         {
-            return _menu.Price();
+            return _menu.GetPrice();
 
         }
         public virtual string GetReceipt()

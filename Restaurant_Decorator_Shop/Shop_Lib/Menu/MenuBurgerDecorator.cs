@@ -14,9 +14,9 @@ namespace Shop_Lib.Menu
 
             }
 
-        public override double Price()
+        public override double GetPrice()
         {
-            return base.Price() + burger.BurgerPrice();
+            return base.GetPrice() + burger.BurgerPrice();
         }
 
         public override string GetReceipt()

@@ -2,7 +2,7 @@
 {
     public interface IMenu
     {
-        double Price();
+        double GetPrice();
         
 
         string GetReceipt();
