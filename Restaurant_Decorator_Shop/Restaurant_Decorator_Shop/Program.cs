@@ -10,7 +10,7 @@ namespace Restaurant_Decorator_Shop
         {
             //Laver en menu
             IMenu menu = new SimpleMenu();
-            Console.WriteLine("Menu: {0} Price: {1}",menu.GetReceipt(),menu.GetPrice());
+            Console.WriteLine("Menu: {0} Price: {1}", menu.GetReceipt(), menu.GetPrice());
 
             //Tilføjer burgermenu til menu
             MenuDecorator menuUpgrade = new MenuBurgerDecorator(menu);
@@ -29,7 +29,8 @@ namespace Restaurant_Decorator_Shop
 
             //Tilføjer burger til burgermenu
             menuUpgrade.Burger = Cheese;
-            Console.WriteLine("Menu: {0} Price: {1}", menuUpgrade.GetReceipt(), menuUpgrade.GetPrice());
+            Console.WriteLine("Menu: {0} Price: {1} Burger Price: {2}", menuUpgrade.GetReceipt(),
+                menuUpgrade.GetPrice(), menuUpgrade.Burger.BurgerPrice());
         }
     }
 }
