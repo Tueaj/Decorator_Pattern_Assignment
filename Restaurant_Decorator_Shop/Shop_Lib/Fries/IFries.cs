@@ -2,7 +2,7 @@
 {
     public interface IFries
     {
-        IFries MakeFries();
-        double GetFriesPrice();
+        string GetDetails();
+        double GetPrice();
     }
 }

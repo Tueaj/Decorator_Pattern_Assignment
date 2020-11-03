@@ -2,14 +2,21 @@
 {
     public abstract class FriesDecorator : IFries
     {
-        public IFries MakeFries()
+        private readonly IFries _fries;
+
+        public FriesDecorator(IFries fries)
         {
-            throw new System.NotImplementedException();
+            _fries = fries;
         }
 
-        public double GetFriesPrice()
+        public virtual string GetDetails()
         {
-            throw new System.NotImplementedException();
+            return _fries.GetDetails();
+        }
+
+        public virtual double GetPrice()
+        {
+            return _fries.GetPrice();
         }
     }
 }

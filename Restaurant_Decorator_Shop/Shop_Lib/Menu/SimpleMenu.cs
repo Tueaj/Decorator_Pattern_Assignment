@@ -2,7 +2,7 @@
 {
     public class SimpleMenu : IMenu
     {
-        public double Price()
+        public double GetPrice()
         {
             return 0;
 

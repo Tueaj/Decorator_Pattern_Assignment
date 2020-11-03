@@ -10,12 +10,12 @@
             _menu = menu;
 
         }
-        public  virtual double Price()
+        public  virtual double GetPrice()
         {
-            return _menu.Price();
+            return _menu.GetPrice();
 
         }
-        public string GetReceipt()
+        public virtual string GetReceipt()
         {
             return _menu.GetReceipt();
         }

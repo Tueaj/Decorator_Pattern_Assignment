@@ -2,12 +2,12 @@
 {
     public class SimpleFries : IFries
     {
-        public IFries MakeFries()
+        public string GetDetails()
         {
-            throw new System.NotImplementedException();
+            return "Simple fries";
         }
 
-        public double GetFriesPrice()
+        public double GetPrice()
         {
             return 30;
         }
