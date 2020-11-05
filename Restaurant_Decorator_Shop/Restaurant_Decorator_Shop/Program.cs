@@ -9,37 +9,36 @@ namespace Restaurant_Decorator_Shop
     {
         static void Main(string[] args)
         {
-            //Laver en menu
-            IMenu menu = new SimpleMenu();
-            Console.WriteLine("{0} Price: {1}", menu.GetReceipt(), menu.GetPrice());
-
-            //Tilføjer burgermenu til menu
+            //Opretter en burger
             IBurger MeatLover = new MeatBurger();
-            MenuDecorator menuUpgrade = new MenuBurgerDecorator(menu);
-            menuUpgrade.Burger = MeatLover;
-            Console.WriteLine("{0} Price: {1}", menuUpgrade.GetReceipt(), menuUpgrade.GetPrice());
 
-            //tilføjer ting til burger
-            BurgerDecorator Bacon = new BaconDecorator(MeatLover);
-            Console.WriteLine($"Burger: {Bacon.BurgerDetails()} price:{Bacon.BurgerPrice()}");
-            BurgerDecorator Cheese = new CheeseDecorator(Bacon);
-            BurgerDecorator BaconTwo = new BaconDecorator(Cheese);
-            Console.WriteLine($"Burger: {BaconTwo.BurgerDetails()} price:{BaconTwo.BurgerPrice()}");
+            //Opretter pommes frittes
+            IFries Fritter = new SimpleFries();
 
-            //Tilføjer burger og fries til  simplemenu(menuUpgrade)
-            IFries Fries = new SimpleFries();
-            menuUpgrade.Burger = BaconTwo;
-            MenuDecorator menuUpgrade3 = new MenuFriesDecorator(menuUpgrade);
-            menuUpgrade3.Fries = Fries;
-            Console.WriteLine("{0} Price: {1}", menuUpgrade3.GetReceipt(), menuUpgrade3.GetPrice());
+            //opretter en tom Menu
+            IMenu Menu1 = new SimpleMenu();
 
-            //tilføjer fries
-            IMenu menu2 = new SimpleMenu();
-            MenuDecorator menuUpgrade2 = new MenuFriesDecorator(menu);
-            menuUpgrade2.Fries = Fries;
+            //denne menu består af ingen ting, da den ikke har fået tilknyttet en Fries eller Burger
+            Console.WriteLine($"Price for Menu1: {Menu1.GetPrice()}, and the {Menu1.GetReceipt()}");
 
-            Console.WriteLine($"{Fries.GetPrice()} and {Fries.GetDetails()}");
-            Console.WriteLine("{0} Price: {1}", menuUpgrade2.GetReceipt(), menuUpgrade2.GetPrice());
+            //Der tilføjes en burger til Menu1
+            MenuDecorator Menu1Burger = new MenuBurgerDecorator(Menu1);
+            Menu1Burger.Burger = MeatLover;
+            Console.WriteLine($"Price for Menu1: {Menu1Burger.GetPrice()}, and the {Menu1Burger.GetReceipt()}");
+
+            //Der filføjes fries til Menu1
+            MenuDecorator Menu1Fries = new MenuFriesDecorator(Menu1Burger);
+            Menu1Fries.Fries = Fritter;
+            Console.WriteLine($"Price for Menu1: {Menu1Fries.GetPrice()}, and the {Menu1Fries.GetReceipt()}");
+
+            //Der tilføjes Ost til burger og uskriver burgeren
+            BurgerDecorator CheeseBurger = new CheeseDecorator(MeatLover);
+            Console.WriteLine($"CheeseBurger contains: {CheeseBurger.BurgerDetails()} and the price is {CheeseBurger.BurgerPrice()}");
+
+            //Cheeseburger tilføjes til Menu, så vi har både Meatlover og cheeseburger
+            MenuDecorator Menu1Cheese = new MenuBurgerDecorator(Menu1Fries);
+            Menu1Cheese.Burger = CheeseBurger;
+            Console.WriteLine($"Price for Menu1: {Menu1Cheese.GetPrice()}, and the {Menu1Cheese.GetReceipt()}");
 
         }
 

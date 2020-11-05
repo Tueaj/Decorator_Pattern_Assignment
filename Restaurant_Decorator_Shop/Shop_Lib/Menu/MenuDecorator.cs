@@ -5,6 +5,8 @@ namespace Shop_Lib.Menu
 {
     public abstract class MenuDecorator : IMenu
     {
+        public IBurger Burger { get; set; }
+        public IFries Fries { get; set; }
 
         private readonly IMenu _menu;
 
@@ -22,9 +24,5 @@ namespace Shop_Lib.Menu
         {
             return _menu.GetReceipt();
         }
-
-        //det her skal vi finde en anden vej omkring, da det ikke overholder OCP - Jacob
-        public IBurger Burger { get; set; }
-        public IFries Fries { get; set; }
     }
 }

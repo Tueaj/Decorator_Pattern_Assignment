@@ -4,7 +4,7 @@
     {
         public string GetDetails()
         {
-            return "Simple fries";
+            return " Simple fries ";
         }
 
         public double GetPrice()
