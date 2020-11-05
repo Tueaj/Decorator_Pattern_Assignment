@@ -1,4 +1,4 @@
-﻿using Shop_Lib.Burger;
+﻿using Shop_Lib.Fries;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +7,7 @@ namespace Shop_Lib.Menu
 {
     public class MenuFriesDecorator : MenuDecorator
     {
+        public IFries Fries { get; set; }
         public MenuFriesDecorator(IMenu menu) : base(menu)
         {
 

@@ -23,12 +23,12 @@ namespace Restaurant_Decorator_Shop
 
             //Der tilføjes en burger til Menu1
             MenuDecorator Menu1Burger = new MenuBurgerDecorator(Menu1);
-            Menu1Burger.Burger = MeatLover;
+            ((MenuBurgerDecorator)Menu1Burger).Burger = MeatLover;
             Console.WriteLine($"Price for Menu1: {Menu1Burger.GetPrice()}, and the {Menu1Burger.GetReceipt()}");
 
             //Der filføjes fries til Menu1
             MenuDecorator Menu1Fries = new MenuFriesDecorator(Menu1Burger);
-            Menu1Fries.Fries = Fritter;
+            ((MenuFriesDecorator)Menu1Fries).Fries = Fritter;
             Console.WriteLine($"Price for Menu1: {Menu1Fries.GetPrice()}, and the {Menu1Fries.GetReceipt()}");
 
             //Der tilføjes Ost til burger og uskriver burgeren
@@ -37,7 +37,7 @@ namespace Restaurant_Decorator_Shop
 
             //Cheeseburger tilføjes til Menu, så vi har både Meatlover og cheeseburger
             MenuDecorator Menu1Cheese = new MenuBurgerDecorator(Menu1Fries);
-            Menu1Cheese.Burger = CheeseBurger;
+            ((MenuBurgerDecorator)Menu1Cheese).Burger = CheeseBurger;
             Console.WriteLine($"Price for Menu1: {Menu1Cheese.GetPrice()}, and the {Menu1Cheese.GetReceipt()}");
 
         }

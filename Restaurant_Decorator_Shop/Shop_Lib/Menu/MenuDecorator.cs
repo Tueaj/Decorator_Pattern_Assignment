@@ -5,9 +5,6 @@ namespace Shop_Lib.Menu
 {
     public abstract class MenuDecorator : IMenu
     {
-        public IBurger Burger { get; set; }
-        public IFries Fries { get; set; }
-
         private readonly IMenu _menu;
 
         public MenuDecorator(IMenu menu)
