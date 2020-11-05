@@ -2,6 +2,7 @@
 using Shop_Lib.Burger;
 using Shop_Lib.Fries;
 using Shop_Lib.Menu;
+using Shop_Lib;
 
 namespace Restaurant_Decorator_Shop
 {
@@ -9,7 +10,16 @@ namespace Restaurant_Decorator_Shop
     {
         static void Main(string[] args)
         {
-            //Opretter en burger
+            IAutomat automat = new Automat();
+            automat.PickMeatBurger();
+            automat.AddBaconToBurger();
+
+            automat.PickFries();
+            automat.AddChiliMayoToFries();
+
+            automat.CompleteBuy();
+
+            /*//Opretter en burger
             IBurger MeatLover = new MeatBurger();
 
             //Opretter pommes frittes
@@ -39,7 +49,7 @@ namespace Restaurant_Decorator_Shop
             MenuDecorator Menu1Cheese = new MenuBurgerDecorator(Menu1Fries);
             ((MenuBurgerDecorator)Menu1Cheese).Burger = CheeseBurger;
             Console.WriteLine($"Price for Menu1: {Menu1Cheese.GetPrice()}, and the {Menu1Cheese.GetReceipt()}");
-
+            */
         }
 
     }
